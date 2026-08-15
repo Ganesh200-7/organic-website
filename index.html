@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GANESH ORGANIC FARM | Luxury Agri-Tech & Regenerative Bio-Dynamic Farm</title>
+  <meta name="description" content="State-of-the-art bio-dynamic organic farm powered by IoT soil intelligence, zero synthetic chemicals, and sun-ripened precision agriculture.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR (Active Across All 5 Tabs)
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" onclick="switchTab('home'); return false;">
+        <img src="assests/ganesh_logo.png" alt="Ganesh Organic Farm Logo" class="brand-logo-img">
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--text-primary); line-height: 1.1;">GANESH</div>
+          <span class="brand-tag">Organic Farm • Pure • Natural • Better</span>
+        </div>
+      </a>
+
+      <!-- Navigation Tabs (5 Open Views) -->
+      <nav class="nav-links">
+        <button class="nav-item active" data-tab="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </button>
+        <button class="nav-item" data-tab="farm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Our Farm
+        </button>
+        <button class="nav-item" data-tab="products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V18a1 1 0 0 1-2 0v-1.07A4 4 0 0 1 8 13a1 1 0 0 1 2 0 2 2 0 0 0 4 0c0-1.1-.9-2-2-2a4 4 0 0 1-4-4 4 4 0 0 1 3-3.93V6a1 1 0 0 1 2 0v1.07A4 4 0 0 1 16 11a1 1 0 0 1-2 0 2 2 0 0 0-4 0c0 1.1.9 2 2 2a4 4 0 0 1 4 4z"/></svg>
+          Products
+        </button>
+        <button class="nav-item" data-tab="shop">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Shop / Orders
+        </button>
+        <button class="nav-item" data-tab="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Contact / Visit
+        </button>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark / Light Theme">
+          <span class="theme-toggle-icon">🌙</span>
+          <span class="theme-toggle-text">Dark</span>
+        </button>
+
+        <button class="cart-btn" onclick="switchTab('shop')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Cart
+          <span class="cart-badge">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE VIEW 1: HOME VIEW
+       ========================================================================== -->
+  <main id="view-home" class="page-view active">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="assests/ChatGPT Image Aug 14, 2026, 09_23_01 PM.png" alt="Terra Verde Organic Farm" class="hero-bg">
+      <div class="hero-overlay-gradient"></div>
+      
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="gold-badge">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Certified Bio-Dynamic & IoT Monitored
+            </span>
+            <h1 class="hero-title">Pure From Our Soil.<br><span>Better For Your Life.</span></h1>
+            <p class="hero-subtitle">
+              Experience luxury organic produce cultivated using regenerative soil agritech, zero chemical pesticides, and solar micro-drip irrigation. Delivered cold-chain fresh to your table within hours of morning harvest.
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn btn-primary" onclick="switchTab('farm')">
+                Explore Our Farm
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <button class="btn btn-secondary" onclick="switchTab('products')">
+                Shop Fresh Harvest
+              </button>
+            </div>
+          </div>
+
+          <!-- Luxury Premium Image Slider Container (Edge-Only Luminous Glow) placed beside "Pure From Our Soil" -->
+          <div class="luxury-slider-wrapper">
+            <div class="luxury-corner-glow"></div>
+            <div class="luxury-slider-frame">
+              <div class="luxury-edge-shimmer"></div>
+              <div id="luxury-slides-track" class="luxury-slides-track">
+                <!-- Slide 1: ChatGPT Aug 14 Image 1 -->
+                <div class="luxury-slide">
+                  <img src="assests/ChatGPT Image Aug 14, 2026, 09_23_01 PM.png" alt="12,500-Acre Bio-Dynamic Estate">
+                  <span class="luxury-slide-badge">12,500-Acre Bio-Dynamic Estate</span>
+                </div>
+                <!-- Slide 2: ChatGPT Aug 14 Image 2 -->
+                <div class="luxury-slide">
+                  <img src="assests/ChatGPT Image Aug 14, 2026, 09_05_03 PM.png" alt="Solar IoT Micro-Greenhouse">
+                  <span class="luxury-slide-badge">Solar IoT Micro-Greenhouse</span>
+                </div>
+              </div>
+            </div>
+            <!-- Exactly 2 Premium Pagination Dots -->
+            <div class="luxury-pagination-dots">
+              <div class="luxury-dot active" onclick="setLuxurySlide(0)" title="12,500-Acre Bio-Dynamic Estate"></div>
+              <div class="luxury-dot" onclick="setLuxurySlide(1)" title="Solar IoT Micro-Greenhouse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Farm Statistics Strip -->
+    <div class="container">
+      <div class="stats-strip">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="99.8" data-suffix="%">0%</div>
+            <div class="stat-label">Bio-Soil Purity Index</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="0" data-suffix="%">0%</div>
+            <div class="stat-label">Chemical Pesticides</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="12500" data-suffix="+" data-prefix="">0</div>
+            <div class="stat-label">Regenerative Acres</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+            <div class="stat-label">Solar Drip Hydration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Short Farm Introduction & Story -->
+    <section style="padding: 4rem 0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+          <div>
+            <span class="gold-badge" style="margin-bottom: 1rem;">The Ganesh Philosophy</span>
+            <h2 class="section-title">Where Ancient Wisdom Meets Precision Agri-Tech</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">
+              Founded on 12,500 acres of undisturbed virgin valley soil, Ganesh Organic Farm combines bio-dynamic soil microbiology with satellite IoT sensor networks. Every plant is monitored for optimal mineral uptake, creating vegetables and fruits with unmatched flavor intensity and antioxidant density.
+            </p>
+            <div style="display: flex; gap: 2rem; margin-top: 2rem;">
+              <div>
+                <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--gold-primary);">100% Traceable</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Every basket includes a unique lot code tracking soil pH and harvest time.</p>
+              </div>
+              <div>
+                <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--gold-primary);">Cold-Chain Fast</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Refrigerated electric van dispatch keeps living cellular freshness intact.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Single Image Frame for Story Section (Unique non-doubled image) -->
+          <div class="farm-image-frame">
+            <img src="assests/2 page/naseem-buras-_gR_xZU2KcY-unsplash.jpg" alt="Bio-Dynamic Soil & Field Cultivation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Organic Products Teaser -->
+    <section style="padding: 5rem 0; background: rgba(10, 22, 18, 0.5);">
+      <div class="container">
+        <div class="section-header">
+          <span class="gold-badge">Morning Harvest Selection</span>
+          <h2 class="section-title">Featured Organic Harvest</h2>
+          <p class="section-subtitle">Hand-picked at 05:30 AM. Limited daily yield direct from our bio-dynamic soil fields.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+          <!-- Card 1 -->
+          <div class="card product-card">
+            <div class="product-img-wrapper">
+              <img src="assests/dan-meyers-0AgtPoAARtE-unsplash.jpg" alt="Heirloom Tomatoes">
+              <div class="product-badge-overlay"><span class="gold-badge">100% Bio-Dynamic</span></div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Organic Vegetables</div>
+              <h3 class="product-title">Heirloom Sun-Ripened Tomatoes</h3>
+              <div class="product-price-wrap">
+                <div class="product-price">$8.50</div>
+                <div class="product-unit">per 500g lot</div>
+              </div>
+              <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addToCart('prod-1')">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card product-card">
+            <div class="product-img-wrapper">
+              <img src="assests/dan-meyers-IQVFVH0ajag-unsplash.jpg" alt="Tuscan Kale">
+              <div class="product-badge-overlay"><span class="gold-badge">Zero Pesticides</span></div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Organic Vegetables</div>
+              <h3 class="product-title">IoT Monitored Tuscan Kale</h3>
+              <div class="product-price-wrap">
+                <div class="product-price">$6.20</div>
+                <div class="product-unit">per bunch</div>
+              </div>
+              <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addToCart('prod-2')">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card product-card">
+            <div class="product-img-wrapper">
+              <img src="assests/elibet-valencia-munoz-ztHHjV0t0Qw-unsplash.jpg" alt="Ancient Grain">
+              <div class="product-badge-overlay"><span class="gold-badge">Heritage Blend</span></div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Ancient Grains</div>
+              <h3 class="product-title">Artisan Ancient Grain Harvest</h3>
+              <div class="product-price-wrap">
+                <div class="product-price">$14.00</div>
+                <div class="product-unit">per 1kg jar</div>
+              </div>
+              <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="addToCart('prod-3')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-secondary" onclick="switchTab('products')">View All Organic Products</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability & Tech Matrix -->
+    <section style="padding: 5rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="gold-badge">Pioneering Sustainability</span>
+          <h2 class="section-title">The Four Pillars of Ganesh Organic Farm Agri-Tech</h2>
+        </div>
+
+        <div class="tech-matrix-grid">
+          <div class="glass-panel tech-card">
+            <div class="tech-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem;">IoT Soil Micro-Sensors</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+              Deep-earth telemetry nodes measure nitrogen, mineral density, and hydration at 15-minute intervals to optimize natural root absorption.
+            </p>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem;">Closed-Loop Solar Drip</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+              100% powered by solar micro-grids. Rainwater is filtered through natural volcanic basalt before precise micro-hydration.
+            </p>
+          </div>
+
+          <div class="glass-panel tech-card">
+            <div class="tech-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem;">Zero Synthetic Policy</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+              We rely entirely on predatory beneficial insects, bio-diverse cover crops, and organic compost teas for natural pest balancing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       PAGE VIEW 2: OUR FARM VIEW
+       ========================================================================== -->
+  <main id="view-farm" class="page-view">
+    <div class="container">
+      <!-- Farm Hero Header -->
+      <div class="section-header">
+        <span class="gold-badge">Our Legacy & Mission</span>
+        <h1 class="section-title">Cultivating the Future of Bio-Dynamic Soil</h1>
+        <p class="section-subtitle">Explore our 12,500-acre regenerative sanctuary where agricultural tradition harmonizes with cutting-edge environmental science.</p>
+      </div>
+
+      <!-- Story Split View -->
+      <div class="farm-story-hero">
+        <!-- Luxury Premium Image Slider Container (Edge-Only Luminous Glow) -->
+        <div class="luxury-slider-wrapper">
+          <div class="luxury-corner-glow"></div>
+          <div class="luxury-slider-frame">
+            <div class="luxury-edge-shimmer"></div>
+            <div id="luxury-slides-track-farm" class="luxury-slides-track">
+              <!-- Slide 1: 2 page / Bio-Dynamic Estate -->
+              <div class="luxury-slide">
+                <img src="assests/2 page/naseem-buras-_gR_xZU2KcY-unsplash.jpg" alt="12,500-Acre Bio-Dynamic Estate">
+                <span class="luxury-slide-badge">12,500-Acre Bio-Dynamic Estate</span>
+              </div>
+              <!-- Slide 2: 2 page / Solar IoT Precision Hydration -->
+              <div class="luxury-slide">
+                <img src="assests/2 page/Screenshot 2026-08-15 131205.png" alt="Precision IoT Crop Care">
+                <span class="luxury-slide-badge">Precision Solar IoT Irrigation</span>
+              </div>
+            </div>
+          </div>
+          <!-- Exactly 2 Premium Pagination Dots -->
+          <div class="luxury-pagination-dots">
+            <div class="luxury-dot active" onclick="setLuxurySlideFarm(0)" title="12,500-Acre Bio-Dynamic Estate"></div>
+            <div class="luxury-dot" onclick="setLuxurySlideFarm(1)" title="Precision Solar IoT Irrigation"></div>
+          </div>
+        </div>
+        <div>
+          <span class="gold-badge" style="margin-bottom: 0.75rem;">Soil-To-Harvest Mastery</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 1rem;">Nurturing Nature Without Compromise</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            At Ganesh Organic Farm, soil is treated as a living ecosystem. By eschewing synthetic nitrogen and heavy tilling, our soil microbiome thrives—resulting in vegetables with up to 40% higher antioxidant concentration than standard commercial organic crops.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+            Each field block is monitored via autonomous solar rovers and subsurface moisture probes, ensuring every plant receives exact micro-nutrients while saving over 60% of water compared to traditional methods.
+          </p>
+          <button class="btn btn-primary" onclick="openTourModal()">
+            Schedule Private Farm Visit
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Field Operations & Farm Gallery (Images from 2 page) -->
+      <div style="margin: 6rem 0;">
+        <div class="section-header">
+          <span class="gold-badge">Field Operations</span>
+          <h2 class="section-title">Regenerative Precision Agriculture In Action</h2>
+          <p class="section-subtitle">Real-time snapshots of our bio-dynamic estate, zero-chemical crop maintenance, and IoT hydration systems.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2.5rem;">
+          <div class="glass-panel" style="overflow: hidden; padding: 0; border-radius: var(--radius-lg); position: relative;">
+            <div style="height: 260px; overflow: hidden; position: relative;">
+              <img src="assests/2 page/naseem-buras-_gR_xZU2KcY-unsplash.jpg" alt="Bio-Dynamic Cultivation Machinery" style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-smooth);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span class="gold-badge" style="position: absolute; top: 1rem; left: 1rem; backdrop-filter: blur(10px); background: rgba(8, 18, 14, 0.85);">Bio-Dynamic Tilling</span>
+            </div>
+            <div style="padding: 1.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-primary);">Eco-Friendly Soil Regeneration & Tilling</h3>
+              <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">Our specialized electric machinery ensures minimal subsoil disturbance, protecting delicate mycorrhizal networks and organic soil carbon.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel" style="overflow: hidden; padding: 0; border-radius: var(--radius-lg); position: relative;">
+            <div style="height: 260px; overflow: hidden; position: relative;">
+              <img src="assests/2 page/Screenshot 2026-08-15 131205.png" alt="Solar IoT Crop Mist Irrigation" style="width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-smooth);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span class="gold-badge" style="position: absolute; top: 1rem; left: 1rem; backdrop-filter: blur(10px); background: rgba(8, 18, 14, 0.85);">Precision IoT Hydration</span>
+            </div>
+            <div style="padding: 1.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-primary);">Sun-Ripened Mist & Moisture Delivery</h3>
+              <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">Solar-powered precision misting delivers micro-nutrients and volcanic spring water straight to root foliage without water wastage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Soil-to-Harvest Timeline -->
+      <div style="margin: 6rem 0;">
+        <div class="section-header">
+          <span class="gold-badge">Our Process</span>
+          <h2 class="section-title">The Soil-to-Harvest Journey</h2>
+          <p class="section-subtitle">Every stem and fruit passes through five meticulous stages of bio-dynamic cultivation.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel" style="padding: 1.75rem;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-primary); font-weight: 700; letter-spacing: 0.1em;">Stage 01 • Soil Regeneration</span>
+              <h3 style="font-family: var(--font-serif); margin: 0.25rem 0 0.5rem;">Volcanic Compost & Mycorrhizal Inoculation</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">Fields are nourished with aged botanical compost enriched with natural volcanic minerals and beneficial fungal networks.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel" style="padding: 1.75rem;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-primary); font-weight: 700; letter-spacing: 0.1em;">Stage 02 • Heirloom Seeding</span>
+              <h3 style="font-family: var(--font-serif); margin: 0.25rem 0 0.5rem;">Non-GMO Heritage Seed Selection</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">We plant unhybridized heirloom seeds preserved for generations for their authentic aroma and nutritional density.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel" style="padding: 1.75rem;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-primary); font-weight: 700; letter-spacing: 0.1em;">Stage 03 • IoT Precision Hydration</span>
+              <h3 style="font-family: var(--font-serif); margin: 0.25rem 0 0.5rem;">Solar-Powered Micro-Drip Irrigation</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">Solar probes measure real-time root moisture and apply pure volcanic spring rain directly to plant bases.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="glass-panel" style="padding: 1.75rem;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--gold-primary); font-weight: 700; letter-spacing: 0.1em;">Stage 04 • Sun-Ripened Harvest</span>
+              <h3 style="font-family: var(--font-serif); margin: 0.25rem 0 0.5rem;">Hand Picked at 05:30 AM Peak Dew</h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">Produce is hand-harvested during early morning chill when natural Brix sugar levels and crispness reach peak balance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Farmer & Agronomist Team Section -->
+      <div style="margin-bottom: 6rem;">
+        <div class="section-header">
+          <span class="gold-badge">Custodians of the Land</span>
+          <h2 class="section-title">Meet Our Agronomists & Master Farmers</h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="glass-panel team-card">
+            <img src="assests/masood-aslami-_1vfYoRZDL4-unsplash.jpg" alt="Chief Soil Scientist" class="team-avatar">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem;">Dr. Alistair Thorne</h3>
+            <span style="font-size: 0.8rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">Chief Soil Agronomist</span>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Ph.D. in Soil Microbiology. 20+ years perfecting bio-dynamic soil regeneration and mycorrhizal fungal ecosystems.</p>
+          </div>
+
+          <div class="glass-panel team-card">
+            <img src="assests/tim-mossholder-DoAvIcs1mdU-unsplash.jpg" alt="Master Bio-Dynamic Farmer" class="team-avatar">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem;">Helena Vance</h3>
+            <span style="font-size: 0.8rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">Master Bio-Dynamic Farmer</span>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">4th generation organic farmer overseeing heirloom crop rotation, solar drip systems, and natural pest balancing.</p>
+          </div>
+
+          <div class="glass-panel team-card">
+            <img src="assests/mansado-louis-fxFtQhYeBcg-unsplash.jpg" alt="IoT Operations Lead" class="team-avatar">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem;">Julian Sterling</h3>
+            <span style="font-size: 0.8rem; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">Agri-Tech Operations Lead</span>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Directs autonomous field telemetry, solar micro-grid networks, and cold-chain refrigerated dispatch operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       PAGE VIEW 3: PRODUCTS VIEW
+       ========================================================================== -->
+  <main id="view-products" class="page-view">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-badge">100% Certified Organic</span>
+        <h1 class="section-title">The Daily Harvest Catalog</h1>
+        <p class="section-subtitle">Search, filter, and order fresh bio-dynamic produce cultivated in zero-pesticide volcanic soil.</p>
+      </div>
+
+      <!-- Live Search, Category Filters, Sorting Bar -->
+      <div class="products-filter-bar">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="product-search-input" class="form-input" placeholder="Search vegetables, fruits, herbs, ancient grains...">
+        </div>
+
+        <div class="category-chips">
+          <button class="chip active" data-category="all">All Harvest</button>
+          <button class="chip" data-category="vegetables">Vegetables</button>
+          <button class="chip" data-category="fruits">Fruits</button>
+          <button class="chip" data-category="grains">Grains</button>
+          <button class="chip" data-category="herbs">Herbs</button>
+          <button class="chip" data-category="farm-products">Farm Curated</button>
+        </div>
+
+        <select id="product-sort-select" class="form-select" style="width: auto; min-width: 170px;">
+          <option value="default">Sort by: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Top Customer Rated</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Products Grid -->
+      <div id="products-grid-container" class="products-grid">
+        <!-- Rendered dynamically by products.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       PAGE VIEW 4: SHOP / ORDERS VIEW
+       ========================================================================== -->
+  <main id="view-shop" class="page-view">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-badge">E-Commerce Experience</span>
+        <h1 class="section-title">Your Shopping Cart & Order Tracking</h1>
+        <p class="section-subtitle">Review items, configure eco-friendly cold dispatch, and track live IoT delivery telemetry.</p>
+      </div>
+
+      <div class="shop-layout">
+        <!-- Left: Cart Items -->
+        <div>
+          <h3 style="font-family: var(--font-serif); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+            Selected Harvest Items
+            <span style="font-size: 0.9rem; font-family: var(--font-sans); color: var(--gold-primary); font-weight: 600;">100% Living Freshness Guarantee</span>
+          </h3>
+
+          <div id="shop-cart-items-list" class="cart-items-container">
+            <!-- Rendered by cart.js -->
+          </div>
+
+          <!-- Live Order Tracking Card Container -->
+          <div id="order-tracking-card-section">
+            <!-- Rendered by cart.js -->
+          </div>
+        </div>
+
+        <!-- Right: Order Summary & Checkout -->
+        <div id="shop-cart-summary">
+          <!-- Rendered by cart.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       PAGE VIEW 5: CONTACT / VISIT FARM VIEW
+       ========================================================================== -->
+  <main id="view-contact" class="page-view">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-badge">Connect & Visit</span>
+        <h1 class="section-title">Visit Our Farm & Get In Touch</h1>
+        <p class="section-subtitle">Experience bio-dynamic agriculture firsthand or reach our concierge for custom estate orders.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Left: Contact Details & Map Card -->
+        <div>
+          <div class="glass-panel" style="padding: 2.25rem; margin-bottom: 2rem;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1.25rem; color: var(--gold-primary);">Farm Concierge & Operations</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.95rem; color: var(--text-secondary);">
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <span style="color: var(--gold-primary); font-size: 1.2rem;">📍</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">Farm Location:</strong>
+                  Ganesh Organic Farm Sanctuary, Estate Road 4, Valley View, CA 95476
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <span style="color: var(--gold-primary); font-size: 1.2rem;">📞</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">Direct Concierge Phone:</strong>
+                  +1 (800) 555-GANESH (4263)
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <span style="color: var(--gold-primary); font-size: 1.2rem;">✉️</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">Email Inquiries:</strong>
+                  concierge@ganeshorganicfarm.com
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <span style="color: var(--gold-primary); font-size: 1.2rem;">🕒</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">Farm Store Hours:</strong>
+                  Monday – Sunday: 08:00 AM – 06:00 PM PST
+                </div>
+              </div>
+            </div>
+
+            <!-- Instant WhatsApp & Call CTAs -->
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="https://wa.me/18005552872" target="_blank" class="btn btn-primary" style="flex: 1; padding: 0.75rem;">
+                💬 WhatsApp Farm Desk
+              </a>
+              <a href="tel:18005552872" class="btn btn-secondary" style="flex: 1; padding: 0.75rem;">
+                📞 Call Direct
+              </a>
+            </div>
+          </div>
+
+          <!-- Farm Sanctuary Bio-Dynamic Soil Harvest Image -->
+          <div class="map-wrapper" style="border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); border-radius: var(--radius-md);">
+            <img src="assests/hand.jpg" alt="Ganesh Organic Farm Living Bio-Dynamic Soil" class="map-placeholder-bg" style="filter: brightness(0.96) contrast(1.05); object-fit: cover; object-position: center;">
+          </div>
+        </div>
+
+        <!-- Right: Contact Form & Tour Booking Card -->
+        <div>
+          <div class="glass-card-elevated" style="padding: 2.5rem;">
+            <span class="gold-badge" style="margin-bottom: 0.75rem;">Direct Messaging</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem;">Send Us a Message</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 2rem;">Whether inquiring about bulk restaurant supply or private tours, our farm team responds within 2 hours.</p>
+
+            <form onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="s.jenkins@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Inquiry Type</label>
+                <select id="contact-subject" class="form-select">
+                  <option value="tour">Book Private Estate Tour</option>
+                  <option value="supply">Estate & Restaurant Wholesale Supply</option>
+                  <option value="subscription">Weekly Harvest Box Membership</option>
+                  <option value="general">General Agronomy Question</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-msg">Your Message</label>
+                <textarea id="contact-msg" class="form-textarea" rows="4" placeholder="How can our agronomists assist you?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; margin-top: 0.5rem;">
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL 1: QUICK VIEW PRODUCT TELEMETRY MODAL
+       ========================================================================== -->
+  <div id="quickview-backdrop" class="modal-backdrop" onclick="if(event.target === this) closeQuickViewModal()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeQuickViewModal()">✕</button>
+      <div id="quickview-modal-content">
+        <!-- Rendered by products.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: PRIVATE FARM TOUR BOOKING MODAL
+       ========================================================================== -->
+  <div id="tour-modal-backdrop" class="modal-backdrop" onclick="if(event.target === this) closeTourModal()">
+    <div class="modal-content" style="max-width: 580px;">
+      <button class="modal-close" onclick="closeTourModal()">✕</button>
+      <span class="gold-badge" style="margin-bottom: 0.5rem;">VIP Estate Tour</span>
+      <h2 style="font-family: var(--font-serif); margin-bottom: 0.5rem;">Book a Private Farm Experience</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.75rem;">Walk our bio-dynamic fields, sample peak-ripeness produce, and meet our chief soil agronomists.</p>
+      
+      <form onsubmit="handleTourBooking(event)">
+        <div class="form-group">
+          <label class="form-label" for="tour-date">Preferred Date</label>
+          <input type="date" id="tour-date" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tour-type">Experience Type</label>
+          <select id="tour-type" class="form-select">
+            <option value="Agronomy & Tasting">Bio-Dynamic Soil Walk & Raw Tasting (90 Mins)</option>
+            <option value="Agritech Deep Dive">IoT Sensor & Greenhouse Tech Tour (60 Mins)</option>
+            <option value="Harvest Workshop">Chef’s Farm-to-Table Harvest Workshop (3 Hours)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 1rem;">
+          Request Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER (Consistent Across All Pages)
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="assests/ganesh_logo.png" alt="Ganesh Organic Farm Logo" class="brand-logo-img">
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-primary); line-height: 1.1;">GANESH</div>
+              <span class="brand-tag">Organic Farm • Pure • Natural • Better</span>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 340px; line-height: 1.7;">
+            Pioneering precision regenerative agriculture, bio-dynamic soil restoration, and luxury organic produce.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#" onclick="switchTab('home'); return false;">Home</a></li>
+            <li><a href="#" onclick="switchTab('farm'); return false;">Our Farm Story</a></li>
+            <li><a href="#" onclick="switchTab('products'); return false;">Daily Harvest Catalog</a></li>
+            <li><a href="#" onclick="switchTab('shop'); return false;">Cart & Order Tracking</a></li>
+            <li><a href="#" onclick="switchTab('contact'); return false;">Visit & Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Certifications</h4>
+          <ul>
+            <li><a href="#">100% USDA Organic</a></li>
+            <li><a href="#">Bio-Dynamic Certified</a></li>
+            <li><a href="#">Zero Pesticide Verified</a></li>
+            <li><a href="#">Regenerative Verified</a></li>
+            <li><a href="#">Carbon Neutral Fleet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Receive weekly early-harvest drops & agronomist notes.</p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" class="form-input" style="padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+            <button class="btn btn-primary" style="padding: 0.5rem 1rem;" onclick="showToast('Subscribed to Ganesh Organic Farm Harvest Journal!')">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 GANESH ORGANIC FARM AGRI-TECH INC. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Engines -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
